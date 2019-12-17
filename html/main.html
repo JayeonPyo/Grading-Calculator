@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Jua|Roboto+Slab|Ubuntu:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Jua|Roboto+Slab|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Roboto+Slab|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Main</title>
+    <script>
+      function load(){
+        temp = location.search.split("?");
+        data=temp[1].split(":");
+        compare_sub = data[0].split("_");
+        compare_num = data[1].split("_");
+      }
+
+      function sendFunc(){
+        cal()
+        window.location.assign("advice.html?"+inner);
+      }
+    </script>
+  </head>
+  <body onload="load()">
+    <div>
+      <h3>Rating Calculation</h3>
+    </div>
+    
+    <table id="parent">
+      <tr>
+        <th class="text" id="sub_name">과목명</th>
+        <th class="text" id="lank">석차</th>
+        <th class="text" id="same_lank">동석차</th>
+        <th class="text" id="std_num">이수자</th>
+        <th class="text" id="unit">단위</th> 
+      </tr>
+      <tr class="input">
+        <td><input type="text" placeholder="과목명" /></td>
+        <td><input type="text" placeholder="석차" /></td>
+        <td><input type="text" placeholder="동석차" /></td>
+        <td><input type="text" placeholder="이수자" /></td>
+        <td><input type="text" placeholder="단위" /></td>
+      </tr>
+    </table>
+
+    <button onclick="add()">+</button>
+    <hr>
+    <button id="cal" onclick="sendFunc()">Calculate</button>
+    <h3>Rating Table</h3>
+    
+    <table border="1" width="500" height="300" bordercolor="gray">
+      <th>등급</th>
+      <th colspan="6">누적비율</th>
+      <th colspan="6">등급비율</th>
+      <tr align="center">
+        <td class="rate">1</td>
+        <td colspan="6">0~4%</td>
+        <td colspan="6">4%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">2</td>
+        <td colspan="6">5~11%</td>
+        <td colspan="6">7%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">3</td>
+        <td colspan="6">12~23%</td>
+        <td colspan="6">12%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">4</td>
+        <td colspan="6">24~40%</td>
+        <td colspan="6">17%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">5</td>
+        <td colspan="6">41~60%</td>
+        <td colspan="6">20%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">6</td>
+        <td colspan="6">61~77%</td>
+        <td colspan="6">17%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">7</td>
+        <td colspan="6">78~89%</td>
+        <td colspan="6">12%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">8</td>
+        <td colspan="6">90~96%</td>
+        <td colspan="6">7%</td>
+      </tr>
+      <tr align="center">
+        <td class="rate">9</td>
+        <td colspan="6">97~100%</td>
+        <td colspan="6">4%</td>
+      </tr>
+    </table>
+    <script src="../cal.js"></script>
+    <script>
+      //calculate href 수정(advice 연결하면)
+      let i = 0;
+      function add() {
+        var newChildHTML = `
+            <td class="input"><input type="text" placeholder="과목명" /></td>
+            <td class="input"><input type="text" placeholder="석차" /></td>
+            <td class="input"><input type="text" placeholder="동석차" /></td>
+            <td class="input"><input type="text" placeholder="이수자" /></td>
+            <td class="input"><input type="text" placeholder="단위" /></td>
+            <td class="input"><button onclick="remove('input_${i}')">X</button></td>`;
+        var newChild = document.createElement("tr");
+        newChild.innerHTML = newChildHTML;
+        newChild.id = `input_${i}`;     //'+'의 의미로 문자열을 이어줌`
+        document.getElementById("parent").appendChild(newChild)[i++];
+      }
+
+      function remove(obj) {                      //obj가 id='input_${i}'임
+        var el = document.getElementById(obj);    //obj의 id를 el에 저장
+        el.parentNode.removeChild(el);            //el 부모의 자식노드를 삭제
+      }
+    </script>
+  </body>
+</html>

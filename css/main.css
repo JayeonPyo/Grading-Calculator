@@ -1,0 +1,91 @@
+/* #sub_name
+{
+    margin-left: 65px;
+}
+#lank
+{
+    margin-left: 120px;
+}
+#same_lank
+{
+    margin-left: 130px;
+}
+#std_num
+{
+    margin-left:115px;
+}
+#unit
+{
+    margin-left: 125px;
+} */
+.text
+{
+    font-family: 'Calistoga', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    color: black;
+    margin-left: 50px;
+}
+table
+{
+    font-family: 'Calistoga', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    border: 1px solid #f8bbd0;
+}
+table tr th
+{
+    color: #180F26;
+    background-color: #f06292;
+}
+table tr
+{
+    background-color: white;
+}
+.input
+{
+    background-color: #f8bbd0;
+}
+.rate
+{
+    color: #DD4667;
+}
+#cal
+{
+    text-decoration: none;
+    color: #F25E86;
+    font-size: 20px;
+}
+button
+{
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    color: #DD4667;
+    font-size: 15px;
+    font-family: 'Calistoga', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 3px;
+    text-align: center;
+}
+h3
+{
+    color: #F25E86;
+    text-shadow: 2px 2px #F2F2F2;
+    font-family: 'Calistoga', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+}
+body
+{
+    background-color: #f8bbd0;
+}
+hr{
+    border: 1px solid white;
+}

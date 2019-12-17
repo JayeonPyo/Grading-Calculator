@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Jua|Roboto+Slab|Ubuntu:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Jua|Roboto+Slab|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Roboto+Slab|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/want_rate.css">
+    <title>Want_rate</title>
+</head>
+<body>
+    <div>
+        <h3>What rate do you want?</h3>
+    </div>
+
+    <div class="center">
+        <table id="parent">
+            <tr>
+                <th class="text" id="sub_name">과목명</th>
+                <th class="text" id="lank">등급</th>
+            </tr>
+            <tr class="input">
+                <td><input type="text" placeholder="과목명" /></td>
+                <td><input type="text" placeholder="등급" /></td>
+                <td><button onclick="add()">+</button></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div class="center">
+        <button id="btn" onclick="sendFunc()">NEXT</button>
+    </div>
+</body>
+<script>
+    var want = document.getElementsByTagName("input");
+    var compare_num="no"; var compare_sub="sub";
+    function init(){
+        compare_num="no"; compare_sub="sub";
+    var want = document.getElementsByTagName("input");
+    for(var i = 0; i < want.length;i++){
+        if(i%2 == 0){
+            compare_sub +="_"+ want[i].value;
+        }
+        else{
+            compare_num +="_"+want[i].value;
+        }
+    }
+}
+    function sendFunc(){
+        init();
+        window.location.assign("main.html?"+compare_sub+":"+compare_num);
+        // window.location.herf = "main.html?"+compare_sub+":"+compare_num;
+    }
+</script>
+<script src="../cal.js"></script>
+<script>
+    let i = 0;
+    function add() {
+      var newChildHTML = `
+      <td class="input"><input type="text" placeholder="과목명" /></td>
+          <td class="input"><input type="text" placeholder="등급" /></td>
+          <td class="input"><button onclick="remove('input_${i}')">X</button></td>`;
+      var newChild = document.createElement("tr");
+      newChild.innerHTML = newChildHTML;
+      newChild.id = `input_${i}`;     //'+'의 의미로 문자열을 이어줌
+      document.getElementById("parent").appendChild(newChild)[i++];
+    }
+
+    function remove(obj) {                      //obj가 id='input_${i}'임
+      var el = document.getElementById(obj);    //obj의 id를 el에 저장
+      el.parentNode.removeChild(el);            //el 부모의 자식노드를 삭제
+    }
+  </script>
+</html>

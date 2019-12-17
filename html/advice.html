@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Jua|Roboto+Slab|Ubuntu:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Jua|Roboto+Slab|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/advice.css">
+    <title>Advice</title>
+</head>
+<body onload="load()">
+    <h3>Advice</h3>
+    <div id="result">
+    </div>
+<hr>
+
+<div id="sub">추천 교과서 보러가기</div>
+<div>
+        <nav id="menu">
+                <ul>
+                    <li><a href="../Advice/advice_kor.html" target="_self">Korean</a></li>
+                    <li><a href="../Advice/advice_eng.html" target="_self">English</a></li>
+                    <li><a href="../Advice/advice_math.html" target="_self">Math</a></li>
+                    <li><a href="../Advice/advice_sci.html" target="_self">Science</a></li>
+                    <li><a href="../Advice/advice_soc.html" target="_self">Social</a></li>
+                </ul>
+            </nav>
+</div>
+<div id="sub">다시 계산하러 가기</div>
+<div>
+        <nav id="menu">
+                <ul>
+                    <li><a href="../html/want_rate.html" target="_self">Rating calculation</a></li>
+                </ul>
+            </nav>
+</div>
+<script src="../cal.js"></script>
+<script>
+    function load(){
+        temp = location.search.split("?");
+        inner = temp[1];
+        inner = inner.replace(/_/gi," ");
+
+        print();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+h3
+{
+    color: #F25E86;
+    text-shadow: 2px 2px #F2F2F2;
+    font-family: 'Calistoga', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+}
+hr{
+    border: 1px solid white;
+}
+body
+{
+    background-color: #f8bbd0;
+}
+img
+{
+    width: 12vw;
+    height: 35vh;
+    border: 2px solid black;
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.div
+{
+    background-color: #F2F2F2;
+    height: 60vh;
+    width: 20vw;
+    border-radius: 5px;
+    margin-top: 10vh;
+    
+    box-shadow: 2px 3px 4px rgb(145, 143, 143);
+}
+.inner
+{
+    color: black;
+    font-family: 'Poor Story', cursive;
+    font-size: 15px;
+    margin-left: 3vw;
+}
+a{
+    text-decoration: none;
+}
+.title
+{
+    color: #DD4667;
+    font-size: 25px;
+    font-family: 'Calistoga', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Jua', sans-serif;
+    margin: 10px;
+}
+.price
+{
+    margin: 10px;
+}
+.all
+{
+    display: flex;
+    flex-direction: row;
+     justify-content: center;
+}
+.div_inner
+{
+    background-color: #F2F2F2;
+    height: 60vh;
+    width: 20vw;
+    border-radius: 5px;
+    margin-top: 10vh;
+    margin-left: 3vw;
+    box-shadow: 2px 3px 4px rgb(145, 143, 143);
+   
+}
+#sub
+{
+    font-size: 30px;
+    color: #DD4667;
+    font-family: 'Calistoga', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Jua', sans-serif;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}

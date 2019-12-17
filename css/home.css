@@ -1,0 +1,52 @@
+h1 {
+    font-family: 'Calistoga', cursive;
+    font-size: 90px;
+    color: #F25E86;
+    text-shadow: 5px 4px 1px #F2F2F2;
+    display: flex;
+    justify-content: center;
+}
+#menu{
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+ul {
+    list-style-type: none;
+}
+li a {
+    display: inline-block;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F25E86;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    width: 150px;
+    vertical-align: middle;
+    cursor: pointer;
+    box-shadow: 0px 9px #F080B0;
+    font-family: 'Calistoga', cursive;
+    font-family: 'Ubuntu', sans-serif;
+}
+li a:active {
+    background-color: #DD4667;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px #F27E93;
+    transform: translateY(4px);
+}
+li a:hover
+{
+    background-color: #DD4667;
+}
+body{
+   background-color: #f8bbd0;
+    
+}
+
+
